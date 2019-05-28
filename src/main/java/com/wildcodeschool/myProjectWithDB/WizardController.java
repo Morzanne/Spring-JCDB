@@ -48,9 +48,10 @@ public class WizardController {
                     int id = resultSet.getInt("id");
                     String name = resultSet.getString("name");
                     int capacity = resultSet.getInt("capacity");
+                    String otherCountry = resultSet.getString(("country"));
 
 
-                    schools.add(new School(id, name, capacity,country));
+                    schools.add(new School(id, name, capacity,otherCountry));
 
 
                 }
@@ -87,5 +88,8 @@ class School {
     public String getFirstname() {
         return name;
     }
+
+    public String getCountry() {return this.country;}
+
 }
 
